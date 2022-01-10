@@ -1,0 +1,8 @@
+version: '3'
+services:
+  rmi-nameserver:
+    container_name: "rmi-nameserver"
+    build: .
+    working_dir: /app
+    restart: always
+    command: sh -c "echo 'Nameserver iniciado...' && python3 -m Pyro4.naming"
